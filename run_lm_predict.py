@@ -424,6 +424,7 @@ def parse_result(result, all_tokens, output_file=None):
     tf.logging.info("***** Predict results *****")
     i = 0
     sentences = []
+    perplexity = []
     for word_loss in result:
       # start of a sentence
       if all_tokens[i] == "[CLS]":
@@ -453,11 +454,13 @@ def parse_result(result, all_tokens, output_file=None):
         sentence["tokens"] = tokens
         sentence["ppl"] = float(np.exp(sentence_loss / word_count_per_sent))
         sentences.append(sentence)
+        perplexity[i] = float(np.exp(sentence_loss / word_count_per_sent))
         i += 1
 
     if output_file is not None:
       tf.logging.info("Saving results to %s" % output_file)
       writer.write(json.dumps(sentences, indent=2, ensure_ascii=False))
+      writer.write(sum(perplexity))
 
 def main(_):
   tf.logging.set_verbosity(tf.logging.INFO)
