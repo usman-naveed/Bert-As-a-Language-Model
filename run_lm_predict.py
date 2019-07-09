@@ -460,7 +460,7 @@ def parse_result(result, all_tokens, output_file=None):
     if output_file is not None:
       tf.logging.info("Saving results to %s" % output_file)
       writer.write(json.dumps(sentences, indent=2, ensure_ascii=False))
-      writer.write(json.dumps(sum(perplexity), indent = 2, ensure_ascii=False)
+      writer.write(json.dumps(sum(perplexity), indent = 2, ensure_ascii=False))
 
 def main(_):
   tf.logging.set_verbosity(tf.logging.INFO)
