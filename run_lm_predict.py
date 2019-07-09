@@ -454,7 +454,7 @@ def parse_result(result, all_tokens, output_file=None):
         sentence["tokens"] = tokens
         sentence["ppl"] = float(np.exp(sentence_loss / word_count_per_sent))
         sentences.append(sentence)
-        perplexity[i] = float(np.exp(sentence_loss / word_count_per_sent))
+        perplexity.append(float(np.exp(sentence_loss / word_count_per_sent)))
         i += 1
 
     if output_file is not None:
