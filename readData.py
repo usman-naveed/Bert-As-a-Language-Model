@@ -1,5 +1,6 @@
 import os
 import pandas as pd
+import ast
 
 
 
@@ -16,7 +17,7 @@ if cwd != "/data/naveed/queensData":
 list_of_DF = []
 for filename in os.listdir(cwd):
     df = pd.read_csv(filename, sep='\t')
-    edited_sentences = df['edited_sentence'].str.decode("utf-8")
+    edited_sentences = df['edited_sentence'].apply(ast.literal_eval).str.decode("utf-8")
     list_of_DF.append(edited_sentences)
 
 
