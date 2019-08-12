@@ -5,4 +5,4 @@ import readData
 def main():
     #retrieve edited sentences
     documents = readData.read_data()
-    print(documents)
+    print(documents.tostring())
