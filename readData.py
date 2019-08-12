@@ -17,7 +17,7 @@ if cwd != "/data/naveed/queensData":
 list_of_DF = []
 for filename in os.listdir(cwd):
     df = pd.read_csv(filename, sep='\t')
-    edited_sentences = df['edited_sentence']
+    edited_sentences = df['edited_sentence'].to_string()
     list_of_DF.append(edited_sentences)
 
 
