@@ -7,6 +7,7 @@ def read_data():
     #ensure working directory is correct
     os.chdir("/data/naveed/queensData")
     cwd = os.getcwd()
+    print(cwd)
 
     if cwd != "/data/naveed/queensData":
         print("Not correct directory, current directory of operation is: ", cwd)
