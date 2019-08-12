@@ -22,6 +22,6 @@ for filename in os.listdir(cwd):
 
 
 print(len(list_of_DF))
-print(list_of_DF[0][0])
+print(list_of_DF[0])
 
 
