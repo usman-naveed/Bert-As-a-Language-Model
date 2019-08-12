@@ -21,5 +21,5 @@ for filename in os.listdir(cwd):
     list_of_DF.append(edited_sentences)
 
 
-print(list_of_DF[1])
+print(list_of_DF[1].to_string())
 
