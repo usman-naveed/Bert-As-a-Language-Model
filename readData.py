@@ -20,5 +20,6 @@ for filename in os.listdir(cwd):
     edited_sentences = df['edited_sentence']
     list_of_DF.append(edited_sentences)
 
-print(list_of_DF[1])
+
+print(list_of_DF.encode('utf-8')[1])
 
