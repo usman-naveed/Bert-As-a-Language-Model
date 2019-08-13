@@ -18,4 +18,4 @@ for filename in os.listdir(cwd):
     list_of_DF.append(edited_sentences)
 
 print(len(list_of_DF))
-print(list_of_DF[1].encode('utf-16', errors='ignore'))
+print(list_of_DF[1].encode('utf-8', errors='ignore'))
