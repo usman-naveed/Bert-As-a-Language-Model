@@ -22,7 +22,7 @@ for filename in os.listdir(cwd):
     list_of_DF.append(edited_sentences)
 
 for document in list_of_DF:
-    merged_strings.append(''.join(document))
+    merged_strings.append(b" ".join(document))
 
 print(len(list_of_DF))
 print(len(merged_strings))
