@@ -18,7 +18,6 @@ for filename in os.listdir(cwd):
     list_of_DF.append(edited_sentences)
 
 print(len(list_of_DF))
-print(len(merged_strings))
 print(list_of_DF[0][0].decode())
 print(list_of_DF[0][0])
 
