@@ -18,6 +18,5 @@ for filename in os.listdir(cwd):
     list_of_DF.append(edited_sentences)
 
 print(len(list_of_DF))
-#print(list_of_DF[0].decode('ascii', errors='ignore'))
-print(list_of_DF[0][0])
+print(list_of_DF[0].decode('ascii', errors='ignore'))
 
