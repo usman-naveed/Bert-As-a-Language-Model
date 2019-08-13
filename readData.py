@@ -12,7 +12,6 @@ if cwd != "/data/naveed/queensData":
 
 #loop through all the document in the directory and merge edited_sentence col for each document
 list_of_DF = []
-merged_strings = []
 for filename in os.listdir(cwd):
     df = pd.read_csv(filename, sep='\t')
     edited_sentences = df['edited_sentence'].str.encode('ascii',errors='ignore')   #supposed to decode to unicode, the encode to ascii, but str.decode function is giving incorrect output. looks like a bug that has already been raised here: https://github.com/pandas-dev/pandas/issues/22613
@@ -21,5 +20,5 @@ for filename in os.listdir(cwd):
 print(len(list_of_DF))
 print(len(merged_strings))
 print(list_of_DF[0][0].decode())
-print(merged_strings[0])
+print(list_of_DF[0][0])
 
