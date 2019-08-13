@@ -14,8 +14,8 @@ if cwd != "/data/naveed/queensData":
 list_of_DF = []
 for filename in os.listdir(cwd):
     df = pd.read_csv(filename, sep='\t')
-    edited_sentences = df['edited_sentence'].str.cat(sep=' ')  #supposed to decode to unicode, the encode to ascii, but str.decode function is giving incorrect output. looks like a bug that has already been raised here: https://github.com/pandas-dev/pandas/issues/22613
+    edited_sentences = df['edited_sentence'].str.cat(sep=' ')
     list_of_DF.append(edited_sentences)
 
 print(len(list_of_DF))
-print(list_of_DF[1].encode('ascii', errors='ignore'))
+print(list_of_DF[1].encode('utf-16', errors='ignore'))
