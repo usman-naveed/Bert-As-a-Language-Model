@@ -25,8 +25,7 @@ for document in list_of_DF:
     merged_strings.append(''.join(document))
 
 print(len(list_of_DF))
-print(len(merged_strings)
+print(len(merged_strings))
 print(list_of_DF[0][0])
 print(merged_strings[0])
-
 
