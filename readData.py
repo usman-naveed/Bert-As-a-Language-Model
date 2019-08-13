@@ -15,11 +15,8 @@ list_of_DF = []
 for filename in os.listdir(cwd):
     df = pd.read_csv(filename, sep='\t')
     edited_sentences = df['edited_sentence'].str.cat(sep=' ')  #https://github.com/pandas-dev/pandas/issues/22613
-    print(type(edited_sentences))
-    print(edited_sentences.to_string())
-    exit()
     list_of_DF.append(edited_sentences)
 
 print(len(list_of_DF))
-print(list_of_DF[1])
-#.encode('ascii', errors='ignore'))
+print(list_of_DF[1]).encode('ascii', errors='ignore'))
+
