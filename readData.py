@@ -16,13 +16,15 @@ def read_data():
     list_of_DF = []
     for filename in os.listdir(cwd):
         df = pd.read_csv(filename, sep='\t')
+        print(df['edited_sentence'])
+        exit()
         edited_sentences = df['edited_sentence'].str.cat(sep=' ')
         list_of_DF.append(edited_sentences)
 
     print(len(list_of_DF))
     os.chdir("/data/naveed/BERT-Language-Model/bert-as-language-model/data/lm")
-    print(type(list_of_DF))
-    print(type(list_of_DF[1]))
+    print(type(list_of_DF))     #type list
+    print(type(list_of_DF[1]))  #type str
     f = open("edited_sentence_test.txt", "wb")
     f.write(list_of_DF[1].encode('utf-8', errors='ignore'))
     #print(list_of_DF[1].encode('utf-8', errors='ignore'))    #printing just for testing purposes
