@@ -6,3 +6,6 @@ def main():
     #retrieve edited sentences
     documents = readData.read_data()
     print(documents[1])
+
+if __name__ == "__main__":
+    main()
