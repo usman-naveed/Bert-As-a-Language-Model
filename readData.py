@@ -20,7 +20,7 @@ def read_data():
         list_of_DF.append(edited_sentences)
 
     print(len(list_of_DF))
-    os.chdir("/data/lm/")
+    os.chdir("data/lm/")
     f = open("edited_sentence_test.txt", "w+")
     f.write(list_of_DF[1].encode('utf-8', errors= 'ignore'))
     #print(list_of_DF[1].encode('utf-8', errors='ignore'))    #printing just for testing purposes
