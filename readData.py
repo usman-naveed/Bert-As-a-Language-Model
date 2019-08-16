@@ -22,6 +22,6 @@ def read_data():
     print(len(list_of_DF))
     os.chdir("/data/naveed/BERT-Language-Model/bert-as-language-model/data/lm")
     f = open("edited_sentence_test.txt", "w+")
-    f.write(list_of_DF[1])
+    f.write(list_of_DF[1].encode('utf-8', errors='ignore').decode('utf-8', errors='ignore'))
     #print(list_of_DF[1].encode('utf-8', errors='ignore'))    #printing just for testing purposes
     return list_of_DF
