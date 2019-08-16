@@ -16,8 +16,6 @@ def read_data():
     list_of_DF = []
     for filename in os.listdir(cwd):
         df = pd.read_csv(filename, sep='\t')
-        print(df['edited_sentence'])
-        exit()
         edited_sentences = df['edited_sentence'].str.cat(sep=' ')
         list_of_DF.append(edited_sentences)
 
