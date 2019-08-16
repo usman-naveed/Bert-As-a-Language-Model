@@ -462,6 +462,8 @@ def parse_result(result, all_tokens, output_file=None):
       writer.write(json.dumps(sentences, indent=2, ensure_ascii=False))
       writer.write(json.dumps(sum(perplexity), indent = 2, ensure_ascii=False))
 
+    return sum(perplexity)
+
 def main(_):
   tf.logging.set_verbosity(tf.logging.INFO)
 
@@ -525,7 +527,7 @@ def main(_):
 
   result = estimator.predict(input_fn=predict_input_fn)
   output_predict_file = os.path.join(FLAGS.output_dir, "test_results.json")
-  parse_result(result, all_tokens, output_predict_file)
+  return parse_result(result, all_tokens, output_predict_file)
 
 if __name__ == "__main__":
   tf.app.run()
