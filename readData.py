@@ -23,6 +23,7 @@ def read_data():
     os.chdir("/data/naveed/BERT-Language-Model/bert-as-language-model/data/lm")
     print(type(list_of_DF))     #type list
     print(type(list_of_DF[1]))  #type str
+    print(list_of_DF[1])
     f = open("edited_sentence_test.txt", "wb")
     f.write(list_of_DF[1].encode('utf-8', errors='ignore'))
     #print(list_of_DF[1].encode('utf-8', errors='ignore'))    #printing just for testing purposes
