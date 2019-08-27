@@ -24,7 +24,7 @@ def read_data():
     print(type(list_of_DF))     #type list
     print(type(list_of_DF[1]))  #type str
     for i in range(100):
-        with open("edited_sentence_test" + i + ".txt", "wb") as f:
+        with open("edited_sentence_test" + str(i) + ".txt", "wb") as f:
             f.write(list_of_DF[i].encode('utf-8', errors='ignore'))
 
 
