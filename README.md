@@ -1,3 +1,5 @@
+## FORKED FROM xu-song/bert-as-language-model
+
 ## BERT as Language Model
 
 For a sentence <img src="https://www.zhihu.com/equation?tex=S%20=%20w_1,%20w_2,...,%20w_k" alt="S = w_1, w_2,..., w_k" eeimg="1"> , we have
