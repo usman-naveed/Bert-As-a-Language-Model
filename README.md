@@ -1,3 +1,8 @@
+*Added readData.py for data ingestion in accordance with project requirements
+*The model now also provides a total perplexity score of a document, as well as indivdual sentences.
+
+
+
 ## FORKED FROM xu-song/bert-as-language-model
 
 ## BERT as Language Model
