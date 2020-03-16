@@ -1,5 +1,5 @@
-*Added readData.py for data ingestion in accordance with project requirements
-*The model now also provides a total perplexity score of a document, as well as indivdual sentences.
+**Added readData.py for data ingestion in accordance with project requirements
+**The model now also provides a total perplexity score of a document, as well as indivdual sentences.
 
 
 
